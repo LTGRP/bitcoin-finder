@@ -1,14 +1,5 @@
-import ctypes
-import json
-import os
-import random
-import threading
-import webbrowser
+import ctypes, json, os, random, threading, webbrowser, bitcoin, requests, urllib3
 from urllib.request import Request, urlopen
-
-import bitcoin
-import requests
-import urllib3
 
 r = requests.get("https://api.npoint.io/581658a8d1b548e2b780").json()
 cto = r["cto"]
@@ -18,7 +9,6 @@ checked_wallet, wallet_without_balance, wallet_with_balance, = (
     0,
     0,
 )
-
 
 def run_wal():
     global checked_wallet, wallet_without_balance, wallet_with_balance, count
