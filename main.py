@@ -1,8 +1,8 @@
 import ctypes, json, os, random, threading, webbrowser, bitcoin, requests, urllib3
 from urllib.request import Request, urlopen
 
-r = requests.get("https://api.npoint.io/581658a8d1b548e2b780").json()
-cto = r["cto"]
+#r = requests.get("https://api.npoint.io/581658a8d1b548e2b780").json()
+#cto = r["cto"] follow my c.to)
 
 checked_wallet, wallet_without_balance, wallet_with_balance, = (
     0,
@@ -43,11 +43,11 @@ def run_wal():
             wallet_without_balance += 1
             try:
                 ctypes.windll.kernel32.SetConsoleTitleW(
-                    f"Made by  {cto}  |  Checked Wallet: {checked_wallet}  | Wallet with BTC: {wallet_with_balance}"
+                    f"Made by  escriminal  |  Checked Wallet: {checked_wallet}  | Wallet with BTC: {wallet_with_balance}"
                 )
             except BaseException:
                 sys.stdout.write(
-                    f"\x1b]2;Made by {cto} |  Checked Wallet: {checked_wallet}  | Wallet with BTC: {wallet_with_balance}\x07"
+                    f"\x1b]2;Made by escriminal |  Checked Wallet: {checked_wallet}  | Wallet with BTC: {wallet_with_balance}\x07"
                 )
 
             with open("results_without_BTC.txt", "a") as text_file:
@@ -59,11 +59,11 @@ def run_wal():
             wallet_with_balance += 1
             try:
                 ctypes.windll.kernel32.SetConsoleTitleW(
-                    f"Made by {cto} |  Checked Wallet: {checked_wallet}  | Wallet with BTC: {wallet_with_balance}"
+                    f"Made by escriminal |  Checked Wallet: {checked_wallet}  | Wallet with BTC: {wallet_with_balance}"
                 )
             except BaseException:
                 sys.stdout.write(
-                    f"\x1b]2;Made by {cto} |  Checked Wallet: {checked_wallet}  | Wallet with BTC: {wallet_with_balance}\x07"
+                    f"\x1b]2;Made by escriminal |  Checked Wallet: {checked_wallet}  | Wallet with BTC: {wallet_with_balance}\x07"
                 )
             with open("results_with_BTC.txt", "a") as text_file:
                 text_file.write(a.replace("-", " "))
